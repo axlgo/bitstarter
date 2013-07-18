@@ -63,16 +63,16 @@ var clone = function(fn) {
 };
 
 /* return a synchronous function readFileSync() so we don't need
- * to way for its response and not to worry about callbacks to
+ * to wait for its response and no need to worry about callbacks to
  * handle it.
  */
 function getBufferFromFile(file) {
    return fs.readFileSync(program.file);
 };
 
-/* Hacky way to control asyncronous calls, we pass the
+/* Hacky way to control asynchronous calls, we pass the
  * scrappingJson function as a callback so after the
- * buffer is fill from the url, the scrapping callback
+ * buffer is filled from the url, the scrapping callback
  * will be executed.
  */
 function getBufferFromUrl(url, checks, callback) {
